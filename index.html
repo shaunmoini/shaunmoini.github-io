@@ -6,13 +6,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shaun Moini</title>
 
-  <link rel="stylesheet" href="css/index.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/line-awesome.min.css">
+  <script src="js/jquery-3.6.0.min.js" defer></script>
   <script src="js/index.js" defer></script>
-  <script src="js/jquery-3.6.0.min.js" async></script>
 </head>
 
-<body>
+<body class="has-navbar-fixed-top">
+  <nav class="navbar has-shadow is-fixed-top">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <img src="favicon.ico">
+      </a>
+
+      <a class="navbar-burger" data-target="navbarLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+
+    <div id="navbarLinks" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#about">
+          About
+        </a>
+        <a class="navbar-item" href="#project">
+          Projects
+        </a>
+        <a class="navbar-item" href="#contact">
+          Contact
+        </a>
+      </div>
+      <div class="navbar-end">
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="section is-medium">
+    <div class="container">
+      <h1 class="title">Home</h1>
+      <h2 class="subtitle">
+        Landing section.
+      </h2>
+    </div>
+  </section>
+
+  <section id="about" class="section is-medium">
+    <div class="container">
+      <h1 class="title">About</h1>
+      <h2 class="subtitle">
+        About section.
+      </h2>
+    </div>
+  </section>
+
+  <section id="project" class="section is-medium">
+    <div class="container">
+      <h1 class="title">Projects</h1>
+      <h2 class="subtitle">
+        Project section.
+      </h2>
+    </div>
+  </section>
+
+  <section id="contact" class="section is-medium">
+    <div class="container">
+      <h1 class="title">Contact</h1>
+      <h2 class="subtitle">
+        Contact section.
+      </h2>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>Shaun Moini - 2022</p>
+    </div>
+  </footer>
 </body>
 
 </html>
