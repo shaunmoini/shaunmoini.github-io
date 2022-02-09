@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*! bulma.io v0.9.3 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
 .pagination-previous,
 .pagination-next,
@@ -10303,4 +10302,13 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.75);
+  animation: bounce;
 }
