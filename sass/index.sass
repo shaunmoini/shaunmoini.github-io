@@ -1,19 +1,42 @@
 @charset "utf-8"
 @import "nord.sass"
-@import "bulma/utilities/_all"
-@import "bulma/base/_all"
-@import "bulma/elements/_all"
-@import "bulma/form/_all"
-@import "bulma/components/_all"
-@import "bulma/grid/_all"
-@import "bulma/helpers/_all"
-@import "bulma/layout/_all"
+
+$tablet: 1023px
 
 html
   scroll-behavior: smooth
 
-.navbar
-  background-color: rgba(255, 255, 255, 0.75)
-  animation: bounce
+.box
+  height: 100%
 
+#outgoingLinks
+  text-align: center
+  position: fixed
+  bottom: 0
+  right: 15px
+
+  a
+    display: block
+    font-size: 30px
+
+  #divider
+    height: 100px
+
+  @media screen and (max-width: $tablet)
+    position: initial
+    margin-bottom: -15px
+
+    a
+      display: initial
+      padding: 0px 5px
+      font-size: 30px
+
+    #divider
+      height: 0px
+
+footer
+  div
+    background-color: transparent
+    text-align: center
+    padding: 30px 0px
   
