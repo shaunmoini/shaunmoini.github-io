@@ -18,21 +18,28 @@ $(document).ready(() => {
   $.get("https://api.github.com/users/shaunmoini/repos", (res) => {
     let projectSection = $("#project div");
 
-    // only three elements per row
-    for (let i = 0; i < res.length; i += 3) {
+    // only 2 elements per row
+    for (let i = 0; i < res.length; i += 2) {
       let row = $("<div class='columns'></div>");
-      let repos = [res[i], res[i + 1], res[i + 2]];
+      let repos = [res[i], res[i + 1]];
 
       for (let r of repos) {
         if (r) {
           let col = $("<div class='column'></div>");
-          let content = $(`<a href=${r.html_url} target='_blank'></a>`).append(
-            $("<div class='box'></div>").append(
-              $(`<p>${r.name}</p>`), $(`<p>${r.description}</p>`)
-            )
+
+          let body = $("<div></div>").append(
+            $(`<p id="box-title">${r.name}</p>`),
+            $(`<p id="box-subtitle">${r.description}</p>`)
           );
 
-          row.append(col.append(content));
+          let footer = $("<div id='box-footer'></div>");
+          for (let t of r.topics) footer.append($(`<span>${t}</span>`));
+
+          let box = $(`<a href=${r.html_url} target="_blank"></a>`).append(
+            $("<div class='box'></div>").append(body, footer)
+          );
+
+          row.append(col.append(box));
         }
       }
       projectSection.append(row);
