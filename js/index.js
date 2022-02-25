@@ -1,5 +1,4 @@
 $(document).ready(() => {
-  // Event listeners
   // Check for click events on the navbar burger icon
   $(".navbar-burger").click(() => {
     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
@@ -12,6 +11,22 @@ $(document).ready(() => {
     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
     $(".navbar-burger").toggleClass("is-active");
     $(".navbar-menu").toggleClass("is-active");
+  });
+
+  // contact form buttons
+  $("#form-clear").click(() => {
+    $("#form-subject").val('');
+    $("#form-body").val('');
+  });
+
+  $("#form-send").click(() => {
+    let subject = encodeURIComponent($("#form-subject").val());
+    let body = encodeURIComponent($("#form-body").val());
+    document.location.href = `mailto:shaunmoini1@outlook.com?subject=${subject}&body=${body}`;
+
+    // clear form after submission
+    $("#form-subject").val('');
+    $("#form-body").val('');
   });
 
   // populating project section using github api
