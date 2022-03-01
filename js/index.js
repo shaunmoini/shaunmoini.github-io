@@ -1,4 +1,18 @@
 $(document).ready(() => {
+  // theme toggle
+  let themeToggle = $("#theme-toggle");
+  let themeLink = $("#theme");
+  themeToggle.click(() => {
+    if (themeLink.attr("href") == "css/theme-light.min.css") {
+      themeLink.attr("href", "css/theme-dark.min.css");
+      themeToggle.html("<i class='las la-sun'></i>");
+    }
+    else {
+      themeLink.attr("href", "css/theme-light.min.css");
+      themeToggle.html("<i class='las la-moon'></i>");
+    }
+  });
+
   // Check for click events on the navbar burger icon
   $(".navbar-burger").click(() => {
     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"

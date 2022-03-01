@@ -1,6 +1,9 @@
 @charset "utf-8"
-@import "nord.sass"
 @import "https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap"
+
+// general / global styling
+html
+  scroll-behavior: smooth
 
 @font-face
   font-family: 'Daft Font'
@@ -8,23 +11,20 @@
   font-weight: normal
   src: url('../fonts/daft-font.woff') format('woff')
 
-// general / global styling
-html
-  scroll-behavior: smooth
-
-// navbar
-.navbar
-  background-color: red
-  color: red
-
 #home-btn
   font-family: 'Nova Mono', monospace
   font-size: 38px
 
+  @media screen and (max-width: 1023px)
+    font-size: 24px
+
+#theme-toggle
+  font-size: 24px
+
 // about section
 #daft-punk
   font-family: 'Daft Font'
-
+  // color: #ff2b2e
 
 // projects section
 .box
@@ -45,6 +45,7 @@ html
     position: absolute
     bottom: 15px
     font-size: smaller
+    color: $nord8
 
     span
       margin-right: 10px
@@ -54,7 +55,8 @@ html
   text-align: center
   position: fixed
   bottom: 0
-  right: 15px
+  right: 7px
+  background-color: transparent
 
   a
     display: block

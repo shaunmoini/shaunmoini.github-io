@@ -7,12 +7,9 @@
   <title>Shaun Moini | Front-end Software Developer</title>
 
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/index.min.css">
-  <link rel="stylesheet" href="css/bulma.min.css">
   <link rel="stylesheet" href="css/bulma-divider.min.css">
-  <link rel="stylesheet" href="css/hover-min.css">
-  <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/line-awesome.min.css">
+  <link rel="stylesheet" id="theme" href="css/theme-dark.min.css">
 
   <script src="js/jquery-3.6.0.min.js" defer></script>
   <script src="js/index.js" defer></script>
@@ -41,13 +38,16 @@
         <a class="navbar-item" href="#contact">
           Contact
         </a>
+        <a id="theme-toggle" class="navbar-item">
+          <i class='las la-sun'></i>
+        </a>
       </div>
     </div>
   </nav>
 
   <section id="home" class="hero is-fullheight-with-navbar">
     <div class="hero-body">
-      <div class="container is-max-desktop">
+      <div class="container">
         <p class="">Hi, my name is</p>
         <p class="title is-1">Shaun Moini.</p>
         <p class="subtitle is-3">Frontend software developer.</p>
@@ -55,16 +55,17 @@
     </div>
   </section>
 
-  <section id="about" class="section is-large">
-    <div class="container is-max-desktop">
+  <section id="about" class="section is-medium">
+    <div class="container">
       <p class="title is-spaced">About Me</p>
       <p class="subtitle">
         As a software developer with an enthusiasm for web & mobile technologies, I always strive to create applications
         that are not only scalable and efficient, but also intuitive and engaging for the end user.
       </p>
       <p class="subtitle">
-        Recently, I earned my ungraduated degree from Carleton University's School of Computer Science, and I'm currently a
-        front-end software developer at <a href="https://face4systems.com/" target="_blank">Face4 Systems</a>.
+        Recently, I earned my ungraduate degree from Carleton University's School of Computer Science, and I'm
+        currently a front-end software developer at <a href="https://face4systems.com/" target="_blank">Face4
+          Systems</a>.
       </p>
       <p class="subtitle">
         Away from my computer, you can find me tinkering with my homelab, perfecting my battlestation, or listening to
@@ -73,8 +74,8 @@
     </div>
   </section>
 
-  <section id="project" class="section is-large">
-    <div class="container is-max-desktop">
+  <section id="project" class="section is-medium">
+    <div class="container">
       <p class="title is-spaced">Personal Projects</p>
       <p class="subtitle">
         Some things I've developed around topics and technologies that draw my interest.
@@ -82,30 +83,32 @@
     </div>
   </section>
 
-  <section id="contact" class="section is-large">
-    <div class="container is-max-desktop">
+  <section id="contact" class="section is-medium">
+    <div class="container">
       <p class="title is-spaced">Get In Touch</p>
       <p class="subtitle">
-        Whether you a have a question or just want to say hey, feel free to reach out.
+        Whether you have a question or just want to say hey, feel free to reach out.
       </p>
 
-      <div class="field">
-        <label class="label">Subject</label>
-        <div class="control">
-          <input id="form-subject" class="input" type="text">
+      <div class="box">
+        <div class="field">
+          <label class="label">Subject</label>
+          <div class="control">
+            <input id="form-subject" class="input" type="text">
+          </div>
         </div>
-      </div>
 
-      <div class="field">
-        <label class="label">Message</label>
-        <div class="control">
-          <textarea id="form-body" class="textarea"></textarea>
+        <div class="field">
+          <label class="label">Message</label>
+          <div class="control">
+            <textarea id="form-body" class="textarea"></textarea>
+          </div>
         </div>
-      </div>
 
-      <div class="field has-text-centered">
-        <div class="control">
-          <button id="form-send" class="button">Send</button>
+        <div class="field has-text-centered">
+          <div class="control">
+            <button id="form-send" class="button is-primary">Send</button>
+          </div>
         </div>
       </div>
   </section>

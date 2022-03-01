@@ -1,0 +1,45 @@
+@charset "utf-8"
+@import "nord.sass"
+@import "https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+
+$custom-font: 'Source Code Pro', monospace
+$family-sans-serif: $custom-font
+$family-monospace: $custom-font
+
+// $black:        $nord0
+// $black-bis:    $nord1
+// $black-ter:    $nord2
+
+$grey-darker:  $nord4
+$grey-dark:    $nord4
+$grey:         mix($nord4, $nord5)
+$grey-light:   $nord5
+$grey-lighter: mix($nord5, $nord6)
+$grey-lightest: $nord6
+
+$white-ter:    $nord2
+$white-bis:    $nord1
+$white:        $nord0
+
+$orange:       $nord12
+$yellow:       $nord13
+$green:        $nord14
+$turquoise:    $nord8
+$cyan:         $nord8
+$blue:         $nord8
+$purple:       $nord15
+$red:          $nord11
+
+$radius-small: 5px
+$radius: 10px
+$radius-large: 15px
+
+@import "bulma.sass"
+@import "mystyles.sass"
+
+#about, #project, #contact, footer
+  background-color: darken($nord0, 3%)
+
+#outgoingLinks
+  @media screen and (max-width: 1023px)
+    background-color: darken($nord0, 3%)
