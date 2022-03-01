@@ -27,12 +27,7 @@ $(document).ready(() => {
     $(".navbar-menu").toggleClass("is-active");
   });
 
-  // contact form buttons
-  $("#form-clear").click(() => {
-    $("#form-subject").val('');
-    $("#form-body").val('');
-  });
-
+  // contact form submit button
   $("#form-send").click(() => {
     let subject = encodeURIComponent($("#form-subject").val());
     let body = encodeURIComponent($("#form-body").val());
@@ -41,6 +36,39 @@ $(document).ready(() => {
     // clear form after submission
     $("#form-subject").val('');
     $("#form-body").val('');
+  });
+
+  // side link management based on viewport size and scroll location
+  let breakpoint = 1023;
+  let sideLinks = $("#outgoing-links-side");
+  let footerLinks = $("#outgoing-links-footer");
+
+  // on page load
+  if (window.innerWidth > breakpoint) {
+    if ($(window).scrollTop() > 250) sideLinks.fadeIn();
+    else sideLinks.hide();
+  }
+  else {
+    sideLinks.hide();
+    footerLinks.show();
+  }
+  // on resize
+  $(window).resize(() => {
+    if (window.innerWidth > breakpoint) {
+      if ($(this).scrollTop() > 250) sideLinks.show();
+      footerLinks.hide()
+    }
+    else {
+      sideLinks.hide();
+      footerLinks.show();
+    }
+  });
+  // on scroll
+  $(window).scroll(() => {
+    if (window.innerWidth > breakpoint) {
+      if ($(this).scrollTop() > 250) sideLinks.fadeIn();
+      else sideLinks.fadeOut();
+    }
   });
 
   // populating project section using github api
@@ -75,3 +103,23 @@ $(document).ready(() => {
     }
   });
 });
+
+
+// var i = 0;
+// var txt = 'CS Student at Carleton University.'
+// var str = ''
+
+// function typeWriter() {
+//   if (i < txt.length) {
+//     str += txt.charAt(i)
+//     $('#sub-title').html(str)
+//     i++;
+//     setTimeout(typeWriter, 100);
+//   }
+// }
+
+// window.onload = function () {
+//   setTimeout(() => {
+//     this.typeWriter()
+//   }, 1000);
+// }

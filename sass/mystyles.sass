@@ -11,15 +11,26 @@ html
   font-weight: normal
   src: url('../fonts/daft-font.woff') format('woff')
 
+// navigation bar
 #home-btn
   font-family: 'Nova Mono', monospace
   font-size: 38px
-
   @media screen and (max-width: 1023px)
     font-size: 24px
 
 #theme-toggle
   font-size: 24px
+
+// home section
+#home-title
+  text-align: center
+
+#outgoing-links-home
+  a
+    font-size: 36px
+    margin-top: 40px
+    margin-left: 10px
+    margin-right: 10px
 
 // about section
 #daft-punk
@@ -34,7 +45,7 @@ html
 
   #box-title
     font-size: larger
-    font-weight: bold
+    font-weight: 600
     white-space: nowrap
     margin-bottom: 15px
 
@@ -50,36 +61,34 @@ html
     span
       margin-right: 10px
 
-// links to github / linkedin
-#outgoingLinks
+// bottom / side links to github + linkedin
+#outgoing-links-side
+  display: none
   text-align: center
   position: fixed
   bottom: 0
   right: 7px
   background-color: transparent
-
   a
     display: block
-    font-size: 28px
+    font-size: 30px
 
   #divider
     height: 8vh
 
-  @media screen and (max-width: 1023px)
-    position: initial
-    margin-bottom: -15px
-
-    a
-      display: initial
-      padding: 0px 5px
-      font-size: 30px
-
-    #divider
-      height: 0px
-
 // footer section
 footer
   div
-    background-color: transparent
     text-align: center
-    padding: 30px 0px
+    background-color: transparent
+
+    &:nth-child(1)
+      display: none
+      padding-top: 20px
+      padding-left: 5px
+      padding-right: 5px
+      font-size: 30px
+
+    &:nth-child(2)
+      padding-top: 10px
+      padding-bottom: 30px
