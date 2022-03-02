@@ -12,12 +12,15 @@ html
   src: url('../fonts/daft-font.woff') format('woff')
 
 // navigation bar
-#navbar
+.navbar
   opacity: 0
+.navbar-menu
+  background-color: transparent
 
 #home-btn
-  font-family: 'Nova Mono', monospace
+  color: $nord8
   font-size: 36px
+  font-family: 'Nova Mono', monospace
   @media screen and (max-width: 1023px)
     font-size: 24px
 
@@ -39,11 +42,19 @@ html
     margin-right: 10px
 
 // about section
+#about
+  .container
+    opacity: 0
+
 #daft-punk
   font-family: 'Daft Font'
   // color: #ff2b2e
 
 // projects section
+#project
+  .container
+    opacity: 0
+
 .box
   width: 100%
   height: 100%
@@ -73,6 +84,11 @@ html
 
     span
       margin-right: 10px
+
+// contact section
+#contact
+  .container
+    opacity: 0
 
 // footer section
 footer
