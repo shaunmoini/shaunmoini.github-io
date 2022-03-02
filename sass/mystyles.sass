@@ -12,9 +12,12 @@ html
   src: url('../fonts/daft-font.woff') format('woff')
 
 // navigation bar
+#navbar
+  opacity: 0
+
 #home-btn
   font-family: 'Nova Mono', monospace
-  font-size: 38px
+  font-size: 36px
   @media screen and (max-width: 1023px)
     font-size: 24px
 
@@ -24,10 +27,13 @@ html
 // home section
 #home-title
   text-align: center
+  p
+    opacity: 0
 
 #outgoing-links-home
+  opacity: 0
   a
-    font-size: 36px
+    font-size: 38px
     margin-top: 40px
     margin-left: 10px
     margin-right: 10px
@@ -52,6 +58,13 @@ html
   #box-subtitle
     margin-bottom: 40px
 
+  #box-icon
+    position: absolute
+    top: 15px
+    right: 15px
+    color: $nord8
+    font-size: 22px
+
   #box-footer
     position: absolute
     bottom: 15px
@@ -61,21 +74,6 @@ html
     span
       margin-right: 10px
 
-// bottom / side links to github + linkedin
-#outgoing-links-side
-  display: none
-  text-align: center
-  position: fixed
-  bottom: 0
-  right: 7px
-  background-color: transparent
-  a
-    display: block
-    font-size: 30px
-
-  #divider
-    height: 8vh
-
 // footer section
 footer
   div
@@ -83,7 +81,6 @@ footer
     background-color: transparent
 
     &:nth-child(1)
-      display: none
       padding-top: 20px
       padding-left: 5px
       padding-right: 5px

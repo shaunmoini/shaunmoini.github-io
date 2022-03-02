@@ -38,39 +38,6 @@ $(document).ready(() => {
     $("#form-body").val('');
   });
 
-  // side link management based on viewport size and scroll location
-  let breakpoint = 1023;
-  let sideLinks = $("#outgoing-links-side");
-  let footerLinks = $("#outgoing-links-footer");
-
-  // on page load
-  if (window.innerWidth > breakpoint) {
-    if ($(window).scrollTop() > 250) sideLinks.fadeIn();
-    else sideLinks.hide();
-  }
-  else {
-    sideLinks.hide();
-    footerLinks.show();
-  }
-  // on resize
-  $(window).resize(() => {
-    if (window.innerWidth > breakpoint) {
-      if ($(this).scrollTop() > 250) sideLinks.show();
-      footerLinks.hide()
-    }
-    else {
-      sideLinks.hide();
-      footerLinks.show();
-    }
-  });
-  // on scroll
-  $(window).scroll(() => {
-    if (window.innerWidth > breakpoint) {
-      if ($(this).scrollTop() > 250) sideLinks.fadeIn();
-      else sideLinks.fadeOut();
-    }
-  });
-
   // populating project section using github api
   $.get("https://api.github.com/users/shaunmoini/repos", (res) => {
     let projectSection = $("#project div");
@@ -86,7 +53,8 @@ $(document).ready(() => {
 
           let body = $("<div></div>").append(
             $(`<p id="box-title">${r.name}</p>`),
-            $(`<p id="box-subtitle">${r.description}</p>`)
+            $(`<p id="box-subtitle">${r.description}</p>`),
+            $('<i id="box-icon" class="las la-external-link-square-alt"></i>')
           );
 
           let footer = $("<div id='box-footer'></div>");
@@ -102,24 +70,11 @@ $(document).ready(() => {
       projectSection.append(row);
     }
   });
+
+  // fade in animations
+  $("#home-title p:nth-child(1)").delay(500).fadeTo(300, 1);
+  $("#home-title p:nth-child(2)").delay(1100).fadeTo(300, 1);
+  $("#home-title p:nth-child(3)").delay(1700).fadeTo(300, 1);
+  $("#outgoing-links-home").delay(2300).fadeTo(300, 1);
+  $("#navbar").delay(2300).fadeTo(300, 1);
 });
-
-
-// var i = 0;
-// var txt = 'CS Student at Carleton University.'
-// var str = ''
-
-// function typeWriter() {
-//   if (i < txt.length) {
-//     str += txt.charAt(i)
-//     $('#sub-title').html(str)
-//     i++;
-//     setTimeout(typeWriter, 100);
-//   }
-// }
-
-// window.onload = function () {
-//   setTimeout(() => {
-//     this.typeWriter()
-//   }, 1000);
-// }
