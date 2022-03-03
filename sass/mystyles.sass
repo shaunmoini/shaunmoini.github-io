@@ -11,6 +11,68 @@ html
   font-weight: normal
   src: url('../fonts/daft-font.woff') format('woff')
 
+// hover animation classes from hover.css (https://github.com/IanLunn/Hover)
+.shrink
+  display: inline-block
+  vertical-align: middle
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  -webkit-transition-duration: 0.3s
+  transition-duration: 0.3s
+  -webkit-transition-property: transform
+  transition-property: transform
+
+  &:hover, &:focus, &:active
+    -webkit-transform: scale(0.95)
+    transform: scale(0.95)
+
+.float
+  display: inline-block
+  vertical-align: middle
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  -webkit-transition-duration: 0.3s
+  transition-duration: 0.3s
+  -webkit-transition-property: transform
+  transition-property: transform
+  -webkit-transition-timing-function: ease-out
+  transition-timing-function: ease-out
+  transition: 0.3s
+
+  &:hover, &:focus, &:active
+    -webkit-transform: translateY(-8px)
+    transform: translateY(-8px)
+
+.underline-from-left
+  display: inline-block
+  vertical-align: text-bottom
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  position: relative
+  overflow: hidden
+
+  &:hover, &:focus, &:active
+    color: $nord8
+
+  &:before
+    content: ""
+    position: absolute
+    z-index: -1
+    left: 0
+    right: 100%
+    bottom: 0
+    background: $nord8
+    height: 1px
+    -webkit-transition-property: right
+    transition-property: right
+    -webkit-transition-duration: 0.2s
+    transition-duration: 0.2s
+    -webkit-transition-timing-function: ease-out
+    transition-timing-function: ease-out
+
+  &:hover:before, &:focus:before, &:active:before
+    right: 0
+
 // navigation bar
 .navbar
   opacity: 0
@@ -90,6 +152,11 @@ html
   .container
     opacity: 0
 
+#form-send
+  margin-top: 8px
+  &:hover
+    background-color: $nord8
+
 // footer section
 footer
   div
@@ -101,6 +168,8 @@ footer
       padding-left: 5px
       padding-right: 5px
       font-size: 30px
+      -moz-transition: .5s
+      transition: .2s
 
     &:nth-child(2)
       padding-top: 10px

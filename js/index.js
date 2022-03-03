@@ -85,7 +85,7 @@ $(document).ready(() => {
           for (let t of r.topics) footer.append($(`<span>${t}</span>`));
 
           let box = $(`<a href=${r.html_url} target="_blank"></a>`).append(
-            $("<div class='box'></div>").append(body, footer)
+            $("<div class='box shrink'></div>").append(body, footer)
           );
 
           row.append(col.append(box));
