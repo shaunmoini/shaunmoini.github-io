@@ -1,6 +1,6 @@
 # files
 .DS_Store
-/sass/bulma.sass
+bulma.sass
 
 # folders
-/bulma
+sass/sass/
