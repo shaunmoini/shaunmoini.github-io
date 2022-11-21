@@ -25,7 +25,7 @@ $(document).ready(() => {
   $("#form-send").click(() => {
     let subject = encodeURIComponent($("#form-subject").val());
     let body = encodeURIComponent($("#form-body").val());
-    document.location.href = `mailto:shaunmoini1@outlook.com?subject=${subject}&body=${body}`;
+    document.location.href = `mailto:shaunmoini@tutanota.com?subject=${subject}&body=${body}`;
 
     // clear form after submission
     $("#form-subject").val('');
